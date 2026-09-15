@@ -1,0 +1,57 @@
+@import "tailwindcss";
+
+@theme {
+  --color-background: #050505;
+  --color-surface: #111111;
+  --color-primary: #FFC928;
+  --color-cream: #F5EFE2;
+  --color-main: #F7F5F0;
+  --color-muted: rgba(247,245,240,0.68);
+  --color-accent: #A51F24;
+
+  --radius-button: 999px;
+  --radius-card: 20px;
+  --radius-image: 20px;
+
+  --font-heading: "Arial Narrow", "Helvetica Neue", Arial, sans-serif;
+  --font-body: Inter, "Helvetica Neue", Arial, sans-serif;
+  --font-display: Georgia, "Times New Roman", serif;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; overflow-x: hidden; background: #050505; }
+
+body {
+  background-color: var(--color-background);
+  color: var(--color-main);
+  font-family: var(--font-body);
+}
+
+html { color-scheme: dark; }
+[id] { scroll-margin-top: 6rem; }
+a:focus-visible, button:focus-visible, select:focus-visible, textarea:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 4px;
+}
+.skip-link {
+  position: fixed;
+  top: 1rem;
+  left: 1rem;
+  z-index: 100;
+  transform: translateY(-200%);
+  padding: 0.75rem 1rem;
+  background: var(--color-primary);
+  color: var(--color-background);
+  border-radius: var(--radius-button);
+  font-weight: 700;
+}
+.skip-link:focus { transform: none; }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation: none !important;
+    transition: none !important;
+    scroll-behavior: auto !important;
+  }
+  .group:hover img, .group:hover [class*="group-hover:"] { transform: none !important; }
+}

@@ -1,0 +1,5 @@
+import { pageMetadata } from '@/src/data/site';
+import { Photo } from '@/src/components/after-dark/Shared';
+import { DemoBookingForm } from '@/src/components/DemoBookingForm';
+export const metadata=pageMetadata('Contact | Cheezish','Try the Cheezish booking preview. No personal information is sent and no reservation is made.','/contact');
+export default function ContactPage(){return <main className="ad-wrap ad-contact"><div className="ad-contact-story"><p className="ad-eyebrow">Good company. Great cravings.</p><h1>A SEAT AT<br /><em>THE TABLE.</em></h1><p className="ad-lead">Bring your appetite.<br />Imagine the rest.</p><Photo src="/images/menu/master-reference.jpg" alt="A richly layered burger ready for a close-up" priority /><p className="ad-note">CHEEZISH is a fictional restaurant concept.<br />There is no live venue or reservation service.</p></div><section className="ad-booking" aria-labelledby="booking-title"><p className="ad-eyebrow">The table is yours to imagine</p><h2 id="booking-title">MAKE A PLAN.</h2><p id="booking-note">Try a booking preview with example details. Nothing is sent, saved or reserved.</p><DemoBookingForm /></section></main>;}
