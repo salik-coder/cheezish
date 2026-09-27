@@ -1,11 +1,24 @@
 import Image from 'next/image';
-import type { ReactNode } from 'react';
+import type { CSSProperties, ReactNode } from 'react';
 import Link from 'next/link';
+import { FoodDoodle, type DoodleKind } from '../doodles/FoodDoodles';
 
-export function FoodDrawing({ kind = 'burger', className = '' }: { kind?: 'burger' | 'pizza' | 'sandwich'; className?: string }) {
-  return <svg className={className} viewBox="0 0 48 48" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-    {kind === 'burger' ? <><path d="M7 21c0-9 7-14 17-14s17 5 17 14H7Zm0 7h34M9 34h30l-3 7H12l-3-7Z"/><path d="m10 27 7 5 7-5 7 5 7-5M18 13l1 1m10-1 1 1"/></> : kind === 'pizza' ? <><path d="m8 40 9-33c10 1 20 6 25 14L8 40ZM17 12c9 1 16 5 21 12"/><circle cx="21" cy="23" r="2.5"/><circle cx="17" cy="33" r="2"/></> : <><path d="m5 25 18-16 20 16-18 14L5 25Z"/><path d="m9 29 16 13 14-12M9 23l15 10 15-10M19 17l3 3m6 3 3 2"/></>}
-  </svg>;
+export function FoodDrawing({
+  kind = 'burger',
+  className = '',
+  style,
+}: {
+  kind?: DoodleKind;
+  className?: string;
+  style?: CSSProperties;
+}) {
+  return (
+    <FoodDoodle
+      kind={kind}
+      className={className}
+      style={style}
+    />
+  );
 }
 export function Arrow() { return <span aria-hidden="true">↗</span>; }
 export function Action({ href, children, secondary = false }: { href: string; children: ReactNode; secondary?: boolean }) {

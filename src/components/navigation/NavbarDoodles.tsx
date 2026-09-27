@@ -1,4 +1,10 @@
 import type { CSSProperties } from 'react';
+import {
+  BurgerDoodle,
+  PizzaDoodle,
+  SandwichDoodle,
+  HotdogDoodle,
+} from '../doodles/FoodDoodles';
 
 type DoodleKind = 'burger' | 'pizza' | 'sandwich' | 'fries' | 'drink' | 'cheese' | 'taco' | 'hotdog';
 
@@ -35,34 +41,13 @@ const DOODLES: DoodleConfig[] = [
 function DoodleSvg({ kind }: { kind: DoodleKind }) {
   switch (kind) {
     case 'burger':
-      return (
-        <svg viewBox="0 0 36 36" fill="none" stroke="currentColor" strokeWidth="1.3" strokeLinecap="round" strokeLinejoin="round">
-          <path d="M6 15c0-5.5 5.5-9 12-9s12 3.5 12 9H6Z" />
-          <path d="M12 10h.01M18 8.5h.01M23 10h.01M15 12.5h.01M20 12.5h.01" strokeWidth="1.8" />
-          <path d="M5 18.5c2 1 4-1 6 1s4-1 6 1 4-1 6 1 4-1 6 1" />
-          <path d="M6 22.5h24" strokeWidth="1.8" />
-          <path d="M7 25.5h22l-1.5 4.5h-19L7 25.5Z" />
-        </svg>
-      );
+      return <BurgerDoodle className="w-full h-full" strokeWidth={2.4} />;
     case 'pizza':
-      return (
-        <svg viewBox="0 0 36 36" fill="none" stroke="currentColor" strokeWidth="1.3" strokeLinecap="round" strokeLinejoin="round">
-          <path d="M7 29L14 6c7 1.5 13.5 6 16.5 13L7 29Z" />
-          <path d="M14.5 9.5c6 1.8 11.5 5.5 14 11" />
-          <circle cx="17" cy="18" r="1.8" />
-          <circle cx="13" cy="24" r="1.5" />
-          <circle cx="21" cy="22" r="1.5" />
-        </svg>
-      );
+      return <PizzaDoodle className="w-full h-full" strokeWidth={2.4} />;
     case 'sandwich':
-      return (
-        <svg viewBox="0 0 36 36" fill="none" stroke="currentColor" strokeWidth="1.3" strokeLinecap="round" strokeLinejoin="round">
-          <path d="M5 19L18 7l13 12-13 10L5 19Z" />
-          <path d="M7 23l11 9 11-8.5" />
-          <path d="M8 18l10-8 10 8" />
-          <path d="M13 20l10-1" strokeDasharray="1.5 1.5" />
-        </svg>
-      );
+      return <SandwichDoodle className="w-full h-full" strokeWidth={2.4} />;
+    case 'hotdog':
+      return <HotdogDoodle className="w-full h-full" strokeWidth={2.4} />;
     case 'fries':
       return (
         <svg viewBox="0 0 36 36" fill="none" stroke="currentColor" strokeWidth="1.3" strokeLinecap="round" strokeLinejoin="round">
