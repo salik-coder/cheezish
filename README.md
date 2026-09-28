@@ -65,3 +65,31 @@ git clone https://github.com/salik-coder/cheezish.git
 cd cheezish
 npm install
 npm run dev
+
+```
+
+## 🌐 Deployment
+
+The project is deployed on **Vercel**.
+
+**Live Website:**  
+https://cheezish.vercel.app
+
+---
+
+## 📌 Project Purpose
+
+This project was created as a portfolio concept to demonstrate modern frontend development, responsive UI design, animation and production deployment.
+
+> Cheezish is a fictional restaurant concept. No real orders, payments or reservations are processed.
+
+---
+
+## 👨‍💻 Developer
+
+**Salik Saeed**
+
+Full-Stack Developer  
+Next.js • React • .NET • Python • AI Automation
+
+GitHub: https://github.com/salik-coder
